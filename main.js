@@ -25,10 +25,10 @@ function getDecDay() {
 
 function salarySovle() {
   var daysWork = Number(daysInput.value);
-  if (!daysWork || daysWork == 0) {
-    document.querySelector("#total-salary").innerText = "Nhập số ngày";
+  totalSalary = daysWork * salaryDay;
+  if (totalSalary == 0) {
+    document.querySelector("#total-salary").innerText = "Nhập đúng số ngày";
   } else {
-    totalSalary = daysWork * salaryDay;
     document.querySelector("#total-salary").innerText =
       totalSalary.toLocaleString() + " VNĐ";
   }
@@ -109,19 +109,19 @@ const rectangleSizes = document.querySelectorAll(".number-rectangle-input");
 const acreageOutput = document.querySelector("#rectangle-acreage");
 const perimeterOutput = document.querySelector("#rectangle-perimeter");
 
-function getRetangleOutput() {
+function getRetangleOutput(e) {
   let acreage = 1,
     perimeter = 0;
   for (let i = 0; i < rectangleSizes.length; i++) {
-    if (Number(this.value) <= 0 || Number(rectangleSizes[i].value) <= 0) {
-      acreageOutput.innerText = "Nhập đúng các kích thước";
-      perimeterOutput.innerText = "Nhập đúng các kích thước";
-    } else {
-      acreage *= Number(rectangleSizes[i].value);
-      perimeter += Number(rectangleSizes[i].value * 2);
-      acreageOutput.innerText = acreage.toFixed(2) + "    đơn vị diện tích";
-      perimeterOutput.innerText = perimeter.toFixed(1) + "   đơn vị chu vi";
-    }
+    acreage *= Number(rectangleSizes[i].value);
+    perimeter += Number(rectangleSizes[i].value * 2);
+  }
+  if (acreage <= 0) {
+    acreageOutput.innerText = "Nhập đúng các kích thước";
+    perimeterOutput.innerText = "Nhập đúng các kích thước";
+  } else {
+    acreageOutput.innerText = acreage.toFixed(2) + "    đơn vị diện tích";
+    perimeterOutput.innerText = perimeter.toFixed(1) + "   đơn vị chu vi";
   }
 }
 
