@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <form action="#">
+          <div class="user-input">
+            <label for="input">Nhập số ngày làm việc tại đây</label>
+            <div class="user-area">
+              <button type="button" id="dec-day">-</button>
+              <input
+                class="user-import"
+                id="days-input"
+                type="number"
+                placeholder="Số ngày làm việc"
+                min="0"
+              />
+              <button type="button" id="inc-day">+</button>
+            </div>
+            <div class="summary">
+              <span>Salary/Day:</span>
+              <span id="salary-per-day"></span>
+            </div>
+          </div>
+        </form>
+        <div class="salary-title">
+          <span>LƯƠNG CỦA BẠN</span>
+        </div>
+        <div class="salary-output">
+          <span id="total-salary" class="output-inner"
+            >Nhập số ngày ở trên!</span
+          >
+        </div>
+      </div>
+      <div class="container">
+        <form action="#">
+          <div class="user-input">
+            <div class="number">
+              <input
+                class="number-input user-import"
+                type="number"
+                placeholder="Số thứ nhất"
+              />
+              <label for="input">Số thứ nhất</label>
+            </div>
+            <div class="number">
+              <input
+                class="number-input user-import"
+                type="number"
+                placeholder="Số thứ hai"
+              />
+              <label for="input">Số thứ hai</label>
+            </div>
+            <div class="number">
+              <input
+                class="number-input user-import"
+                type="number"
+                placeholder="Số thứ ba"
+              />
+              <label for="input">Số thứ ba</label>
+            </div>
+            <div class="number">
+              <input
+                class="number-input user-import"
+                type="number"
+                placeholder="Số thứ tư"
+              />
+              <label for="input">Số thứ tư</label>
+            </div>
+            <div class="number">
+              <input
+                class="number-input user-import"
+                type="number"
+                placeholder="Số thứ năm"
+              />
+              <label for="input">Số thứ năm</label>
+            </div>
+          </div>
+        </form>
+        <div class="salary-title">
+          <span>SỐ TRUNG BÌNH</span>
+        </div>
+        <div class="salary-output">
+          <span id="average" class="output-inner">Nhập các số ở trên!</span>
+        </div>
+      </div>
+      <div class="container">
+        <form action="#">
+          <div class="user-input">
+            <label for="input">Nhập số tiền tại đây</label>
+            <div class="user-area">
+              <button type="button" id="dec-money">-</button>
+              <input
+                class="user-import-money"
+                id="money-input"
+                type="number"
+                step="0.5"
+                placeholder="Số tiền"
+                min="0"
+              />
+              <button type="button" id="inc-money">+</button>
+            </div>
+            <div class="summary">
+              <span>Exchange rate: </span>
+              <span id="salary-per-money"></span>
+            </div>
+          </div>
+        </form>
+        <div class="salary-title">
+          <span>TIỀN QUY ĐỔI CỦA BẠN</span>
+        </div>
+        <div class="money-output">
+          <span id="total-money" class="output-inner"
+            >Nhập số ngày ở trên!</span
+          >
+        </div>
+      </div>
+      <div class="container">
+        <form action="#">
+          <div class="user-input">
+            <div class="number-rectangle">
+              <input
+                class="number-rectangle-input user-import"
+                type="number"
+                min="0"
+                step="0.1"
+                placeholder="Chiều dài"
+              />
+              <label for="input">Chiều dài</label>
+            </div>
+            <div class="number-rectangle">
+              <input
+                class="number-rectangle-input user-import"
+                type="number"
+                min="0"
+                step="0.1"
+                placeholder="Chiều rộng"
+              />
+              <label for="input">Chiều rộng</label>
+            </div>
+          </div>
+        </form>
+        <div class="salary-title">
+          <span>CÁC THÔNG SỐ CỦA HÌNH CHỮ NHẬT</span>
+        </div>
+        <div class="rectangle-output">
+          <div class="rectangle-inner">
+            <span>Diện tích: </span>
+            <span id="rectangle-acreage" class="rectangle-inner output-inner"
+              >Nhập các kích thước ở trên!</span
+            >
+          </div>
+          <div class="rectangle-inner">
+            <span>Chu vi: </span>
+            <span id="rectangle-perimeter" class="rectangle-inner output-inner"
+              >Nhập các kích thước ở trên!</span
+            >
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <form action="#">
+          <div class="user-input">
+            <label for="input">Nhập</label>
+            <div class="user-area">
+              <input
+                class="user-import"
+                id="number-value"
+                type="number"
+                placeholder="Số tự nhiên lớn hơn 0"
+                min="1"
+              />
+            </div>
+          </div>
+        </form>
+        <div class="sum-title">
+          <span>Tổng các ký số</span>
+        </div>
+        <div class="sume-output">
+          <span id="sum-number" class="output-inner"
+            >Nhập số bạn muốn ở trên!</span
+          >
+        </div>
+      </div>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>
