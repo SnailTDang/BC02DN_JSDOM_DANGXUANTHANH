@@ -110,17 +110,13 @@ const acreageOutput = document.querySelector("#rectangle-acreage");
 const perimeterOutput = document.querySelector("#rectangle-perimeter");
 
 function getRetangleOutput() {
-  let acreage = 0,
+  let acreage = 1,
     perimeter = 0;
   for (let i = 0; i < rectangleSizes.length; i++) {
-    if (
-      Number(rectangleSizes[0].value) <= 0 ||
-      Number(rectangleSizes[1].value) <= 0
-    ) {
+    if (Number(this.value) <= 0 || Number(rectangleSizes[i].value) <= 0) {
       acreageOutput.innerText = "Nhập đúng các kích thước";
       perimeterOutput.innerText = "Nhập đúng các kích thước";
     } else {
-      acreage = 1;
       acreage *= Number(rectangleSizes[i].value);
       perimeter += Number(rectangleSizes[i].value * 2);
       acreageOutput.innerText = acreage.toFixed(2) + "    đơn vị diện tích";
