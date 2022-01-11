@@ -26,7 +26,7 @@ function getDecDay() {
 function salarySovle() {
   var daysWork = Number(daysInput.value);
   totalSalary = daysWork * salaryDay;
-  if (totalSalary == 0) {
+  if (totalSalary <= 0) {
     document.querySelector("#total-salary").innerText = "Nhập đúng số ngày";
   } else {
     document.querySelector("#total-salary").innerText =
